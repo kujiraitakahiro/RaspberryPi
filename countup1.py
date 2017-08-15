@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import RPi.GPIO as GPIO
 import time
+GPIO.setwarnings(False)
 GPIO.setup
 GPIO.setmode(GPIO.BCM)
 channels = [14, 18, 25 ,8, 13, 19, 21, 23]
