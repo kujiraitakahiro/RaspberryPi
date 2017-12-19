@@ -5,6 +5,7 @@ Results=`cut -d " " -f 7 /home/pi/ping_results2`
 Results2=errors,
 if [ $Results = $Results2 ];
 then
+#For Variables tests
 #echo $Results
 #echo $Results2
 #echo match
