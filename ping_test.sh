@@ -1,7 +1,7 @@
 #!/bin/bash
-/bin/ping 192.168.77.77 -c 1 > /home/pi/ping_results 
-grep "received" /home/pi/ping_results > /home/pi/ping_results2
-Results=`cut -d " " -f 7 /home/pi/ping_results2`
+/bin/ping 192.168.77.77 -c 1 > /home/pi/ping_results; 
+grep "received" /home/pi/ping_results > /home/pi/ping_results2;
+Results=`cut -d " " -f 7 /home/pi/ping_results2`;
 Results2=errors,
 if [ $Results = $Results2 ];
 then
