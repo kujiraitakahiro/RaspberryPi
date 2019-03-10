@@ -1,0 +1,1 @@
+curl https://notify-api.line.me/api/notify -X POST -H "Authorization: Bearer *******************************************" -F "message=`grep t= /sys/devices/w1_bus_master1/28-************/w1_slave | cut -d "=" -f 2 | awk '{print substr($0,1,2) "." substr($0,3,5) "℃"}'`"
