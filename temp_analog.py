@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 #Import wiringgpi for Using GPIO, Import time for Using Sleep function.
-import wiringpi as pi, time
+import wiringpi as pi
+import time
 
 #Specify SPI channel on MPC3002(ADconverter)
 SPI_CH = 0
