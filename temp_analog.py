@@ -15,8 +15,8 @@ while True:
 	Buffer = 0x6800 | (0x1800 * READ_CH )
 	Buffer = Buffer.to_bytes( 2, byteorder='big' )
 	pi.wiringPiSPIDataRW( SPI_CH, Buffer )
-	value = ( Buffer[0] * 256 + Buffer[1] ) & 0x3ff
-	volt = value * 3.3 / 1023
-	Temp = volt * 100
+	Value = ( Buffer[0] * 256 + Buffer[1] ) & 0x3ff
+	Volt = Value * 3.3 / 1023
+	Temp = Volt * 100
 	print ("Temperature:", Temp , "℃")
 	time.sleep(1)
