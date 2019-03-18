@@ -18,6 +18,6 @@ while True:
 	pi.wiringPiSPIDataRW( SPI_CH, Buffer )
 	Value = ( Buffer[0] * 256 + Buffer[1] ) & 0x3ff
 	Volt = Value * 3.3 / 1023
-	Temp = Volt * 100
+	Temp = (Volt-0.6) * 100
 	print ("Temperature:", Temp , "℃")
 	time.sleep(1)
