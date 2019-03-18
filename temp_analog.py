@@ -5,7 +5,7 @@
 import wiringpi as pi
 import time
 
-#Specify SPI channel on MPC3002(ADconverter)
+#Select SPI channel on MCP3002(ADconverter)
 SPI_CH = 0
 READ_CH = 0
 
