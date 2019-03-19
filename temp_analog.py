@@ -19,5 +19,5 @@ while True:
 	Value = ( Buffer[0] * 256 + Buffer[1] ) & 0x3ff
 	Volt = ( Value * 3.3 / 1023 ) - 0.6 #offset 0.6V(600mV)
 	Temp = Volt * 100
-	print ("Temperature: ", Temp , "℃")
+	print ("Value: ",Value," Volt: ",Volt," Temperature: ", Temp , "℃")
 	time.sleep(1)
