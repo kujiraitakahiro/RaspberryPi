@@ -12,7 +12,7 @@ READ_CH = 0
 pi.wiringPiSPISetup( SPI_CH, 1000000 )
 
 #for LM61BIZ
-Offset = ( 0.6 / 3.3 ) * 1023 #LM61BIZ offset is 0℃ = 600mV(600mV)
+Offset = ( 0.6 / 3.3 ) * 1023 #LM61BIZ offset is 0℃ = 0.6V(600mV)
 
 while True:
 	Buffer = 0x6800 | ( 0x1800 * READ_CH )
