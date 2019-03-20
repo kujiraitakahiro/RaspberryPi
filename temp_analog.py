@@ -17,8 +17,8 @@ while True:
 	Buffer = Buffer.to_bytes( 2, byteorder='big' )
 	pi.wiringPiSPIDataRW( SPI_CH, Buffer )
 	Value = ( Buffer[0] * 256 + Buffer[1] ) & 0x3ff
-	Offset = ( 0.6 / 3.3 ) * 1023
-	Volt = ( Value - Offset ) * 3.3 / 1023 
+	Offset = ( 0.6 / 3.3 ) * 1023 #LM61BIZ offset is 0℃ = 600mV(600mV)
+	Volt = ( Value - Offset ) * 3.3 / 1023
 	Temp = Volt * 100
 	print ("Value: ",Value," Volt: ",Volt," Temperature: ", Temp , "℃")
 	time.sleep(1)
